@@ -1,6 +1,6 @@
 {
-    "version": 1,
-    "name": "Blog-app Rest Api",
+    "version": 2,
+    "name": "ongrid-app Rest Api",
     "builds": [
        { "src": "server.js", "use": "@vercel/node" }
     ],

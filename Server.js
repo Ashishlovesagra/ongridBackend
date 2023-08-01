@@ -28,7 +28,7 @@ app.use("/api/user", userRoute);
 
 //Rest API
 app.get("/", (req, res) => {
-  res.send("<h1>Welcome To Blog App Backend</h1>");
+  res.send("<h1>Welcome To Ongrid App Backend</h1>");
 });
 
 //route matching

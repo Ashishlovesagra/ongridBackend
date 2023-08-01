@@ -15,26 +15,26 @@ connectDB();
 const app = express();
 
 //MiddleWares
-app.use(cors());
+app.use(cors({origin: ['http://localhost:5173']}));
 app.use(express.json());
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 
 //static
-app.use(express.static("dist"));
+// app.use(express.static("dist"));
 
 //routes
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 
 //Rest API
-// app.get("/", (req, res) => {
-//   res.send("<h1>Welcome To E-commerce App </h1>");
-// });
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome To Blog App Backend</h1>");
+});
 
 //route matching
-app.use("/*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "dist", "index.html"));
-});
+// app.use("/*", function (request, response) {
+//   response.sendFile(path.resolve(__dirname, "dist", "index.html"));
+// });
 
 //PORT
 const Port = process.env.Port || 1009;
